@@ -1,0 +1,38 @@
+
+.gigya-screen-set {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.gigya-form-field input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px #ddd;
+    transition: border-color 0.3s;
+}
+
+.gigya-form-field input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.gigya-input-submit {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.gigya-submit-button:hover {
+    background-color: #0056b3;
+}
