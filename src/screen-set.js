@@ -36,6 +36,7 @@
     updateScreen({container, html, css, js}) {
         console.log('updating screen', {container, html, css, js});
         // const shadow = elem.attachShadow({mode: 'open'});
+       
         this.innerHTML = `
         <style>
         ${css}
@@ -46,6 +47,8 @@
         ${js}
         </script>
         `;
+        
+        this.getElementsByClassName('screen-set')[0].style.display = 'none';
 
     }
     
