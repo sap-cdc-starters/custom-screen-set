@@ -51,9 +51,9 @@
     
     render() {
         async function fetchScreen(screen_set, container){
-            const html =  fetch(`screens/${screen_set}.html`).then(res => res.text());
-            const css =  fetch(`screens/${screen_set}.css`).then(res => res.text());
-            const js =  fetch(`screens/${screen_set}.js`).then(res =>res.ok? res.text() : '');
+            const html =  fetch(`${screen_set}/index.html`).then(res => res.text());
+            const css =  fetch(`${screen_set}/index.css`).then(res => res.text());
+            const js =  fetch(`${screen_set}/index.js`).then(res =>res.ok? res.text() : '');
             return Promise.all([html, css, js]).then(([html, css, js]) => {
                 console.log('fetched screen', {container, html, css, js});
                 return {container, html, css, js}
