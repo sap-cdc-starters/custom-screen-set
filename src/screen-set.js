@@ -49,7 +49,12 @@
         ${js}
         </script>
         `;
-        
+
+
+        gigya && gigya.isReady && this.show();
+        window.onGigyaServiceReady = this.show;
+
+
         // this.getElementsByClassName('screen-set')[0].style.display = 'none';
 
     }
@@ -66,9 +71,6 @@
         }
         
         fetchScreen(this.screenSet, this.container).then(this.updateScreen); 
- 
-        gigya && gigya.isReady && this.show();
-        window.onGigyaServiceReady = this.show; 
     }
  
     connectedCallback() {
