@@ -42,13 +42,15 @@
         ${css}
         </style>
         ${container}
-        ${html}
+        <div style="display: none" >
+           ${html}
+        </div>
         <script>
         ${js}
         </script>
         `;
         
-        this.getElementsByClassName('screen-set')[0].style.display = 'none';
+        // this.getElementsByClassName('screen-set')[0].style.display = 'none';
 
     }
     
